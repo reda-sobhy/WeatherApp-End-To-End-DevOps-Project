@@ -36,8 +36,7 @@ module "rds" {
 
   subnet_ids = module.vpc.private_subnet_ids
 
-  allowed_security_group_id = module.eks.node_security_group_id
-
+allowed_security_group_id = module.eks.cluster_security_group_id
   database_name = "app"
 
   username = "admin"
@@ -49,22 +48,45 @@ module "rds" {
   multi_az = true
 
 }
+
+
 module "db_secret" {
 
-  source = "./modules/secrets_manager"
 
-  secret_name = "weather-db"
+source = "./modules/secrets_manager"
 
-  secret_value = jsonencode({
 
-      username = "admin"
 
-      password = var.db_password
+secret_name = "weather-db-v2"
 
-      host = aws_db_instance.mysql.address
 
-      database = "weather"
 
-  })
+secret_value = jsonencode({
+
+ username = "admin"
+
+ password = var.db_password
+
+  host = module.rds.mysql_address
+
+ database = "weather"
+
+})
+
+
+
+oidc_provider_arn = module.eks.oidc_provider_arn
+oidc_provider = module.eks.cluster_oidc_issuer_url
+
+
+
+
+
+namespace = "backend"
+
+
+
+  service_account_name = "weather-app-sa"
+
 
 }

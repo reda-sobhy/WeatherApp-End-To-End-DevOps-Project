@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::420795649706:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/872B04C3B950C816925AA4838C374D07"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "oidc.eks.us-east-1.amazonaws.com/id/872B04C3B950C816925AA4838C374D07:sub": "system:serviceaccount:backend:weather-app-sa",
+          "oidc.eks.us-east-1.amazonaws.com/id/872B04C3B950C816925AA4838C374D07:aud": "sts.amazonaws.com"
+        }
+      }
+    }
+  ]
+}

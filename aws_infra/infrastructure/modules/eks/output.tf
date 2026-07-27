@@ -29,8 +29,7 @@ output "cluster_oidc_issuer_url" {
 
 
 
-output "node_security_group_id" {
-
- value = data.aws_security_groups.nodes.ids[0]
-
+output "cluster_security_group_id" {
+  description = "EKS Cluster Security Group"
+  value       = aws_eks_cluster.this.vpc_config[0].cluster_security_group_id
 }

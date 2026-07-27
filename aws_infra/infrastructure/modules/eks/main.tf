@@ -107,15 +107,4 @@ resource "aws_iam_openid_connect_provider" "this" {
     data.tls_certificate.eks.certificates[0].sha1_fingerprint
   ]
 }
-data "aws_security_groups" "nodes" {
 
-  filter {
-
-    name = "tag:kubernetes.io/cluster/${var.cluster_name}"
-
-    values = [
-      "owned"
-    ]
-  }
-
-}

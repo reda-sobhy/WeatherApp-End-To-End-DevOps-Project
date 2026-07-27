@@ -1,5 +1,3 @@
-
-
 apiVersion: batch/v1
 kind: Job
 
@@ -7,15 +5,18 @@ metadata:
   name: rds-init-job
   namespace: backend
 
+
 spec:
 
   backoffLimit: 5
+
 
   template:
 
     spec:
 
       restartPolicy: Never
+
 
       containers:
 
@@ -26,47 +27,64 @@ spec:
 
         env:
 
+
         - name: DB_HOST
-          valueFrom:
-            secretKeyRef:
-              name: rds-secret
-              key: DB_HOST
 
-
-        - name: DB_PORT
           valueFrom:
+
             secretKeyRef:
-              name: rds-secret
-              key: DB_PORT
+
+              name: weather-db-v2
+
+              key: host
+
 
 
         - name: DB_USER
+
           valueFrom:
+
             secretKeyRef:
-              name: rds-secret
-              key: DB_USER
+
+              name: weather-db-v2
+
+              key: username
+
 
 
         - name: DB_PASSWORD
+
           valueFrom:
+
             secretKeyRef:
-              name: rds-secret
-              key: DB_PASSWORD
+
+              name: weather-db-v2
+
+              key: password
+
 
 
         - name: DB_NAME
+
           valueFrom:
+
             secretKeyRef:
-              name: rds-secret
-              key: DB_NAME
+
+              name: weather-db-v2
+
+              key: database
+
 
 
         command:
+
         - /bin/sh
+
         - -c
 
 
         args:
+
         - |
 
           echo "Connecting to RDS..."
@@ -74,7 +92,6 @@ spec:
 
           mysql \
           -h ${DB_HOST} \
-          -P ${DB_PORT} \
           -u ${DB_USER} \
           -p${DB_PASSWORD} <<EOF
 
@@ -89,16 +106,11 @@ spec:
 
               id INT AUTO_INCREMENT PRIMARY KEY,
 
-              username VARCHAR(100) NOT NULL,
+              user_name VARCHAR(100) NOT NULL,
 
-              password VARCHAR(255) NOT NULL
+              user_password VARCHAR(255) NOT NULL
 
           );
 
 
-
-
           EOF
-
-
-  
