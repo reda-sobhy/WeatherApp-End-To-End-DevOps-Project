@@ -455,7 +455,7 @@ Add screenshots here.
 ## EKS Cluster
 
 
-docs/eks.png
+!docs/eks.png
 
 
 
@@ -463,7 +463,7 @@ docs/eks.png
 ## Kubernetes Pods
 
 
-docs/pods.png
+!docs/pods.png
 
 
 
@@ -499,13 +499,3 @@ docs/cloudwatch.png
 
 **Reda Sobhy**
 
-GitHub:
-https://github.com/reda-sobhy
-
-
-
----
-
-# ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
