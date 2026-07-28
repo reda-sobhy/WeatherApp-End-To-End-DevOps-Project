@@ -1,4 +1,4 @@
-## 🌦️ Weather App End-to-End DevOps Project
+# 🌦️ Weather App End-to-End DevOps Project
 
 ## 📌 Overview
 
