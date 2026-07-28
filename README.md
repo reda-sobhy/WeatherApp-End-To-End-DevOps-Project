@@ -411,11 +411,11 @@ terraform plan
 terraform apply
 ```
 
----
+
 
 ## Configure kubectl
 
-```bash
+bash
 aws eks update-kubeconfig \
 --region us-east-1 \
 --name my-eks
@@ -425,7 +425,10 @@ aws eks update-kubeconfig \
 
 ## Deploy Kubernetes Resources
 
-```bash
+
+
+bash
+
 kubectl apply -f kubernetes/
 ```
 
@@ -433,7 +436,8 @@ kubectl apply -f kubernetes/
 
 ## Verify Deployment
 
-```bash
+
+bash
 kubectl get pods -A
 
 kubectl get svc -A
@@ -441,7 +445,7 @@ kubectl get svc -A
 kubectl get ingress
 ```
 
----
+
 
 # 📸 Screenshots
 
@@ -467,12 +471,9 @@ kubectl get ingress
 
 
 
-## CloudWatch
 
 
-docs/cloudwatch.png
 
----
 
 ## Application
 
