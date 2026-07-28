@@ -130,14 +130,10 @@ jobs:
 
     - name: Deploy to EKS
       run: |
-        kubectl apply -f kubernetes/
+        kubectl apply -f kubernetes/ui/
+        kubectl apply -f kubernetes/authentication/
+         kubectl apply -f kubernetes/weather/
 
-    ####################################
-    # Verify Deployment
-    ####################################
 
-    - name: Verify Rollout
-      run: |
-        kubectl rollout status deployment/app-auth -n backend
-        kubectl rollout status deployment/app-weather -n backend
-        kubectl rollout status deployment/app-ui -n frontend
+
+
