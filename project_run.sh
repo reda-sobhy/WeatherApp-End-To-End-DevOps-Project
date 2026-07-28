@@ -36,13 +36,11 @@ echo "======================================"
 echo "Installing CloudWatch Addons"
 echo "======================================"
 
-chmod +x addons-cloudwathch.sh
-../cloudwatch/addons-cloudwathch.sh
+./aws_infra/cloudwatch/addons-cloudwathch.sh
 
 echo "======================================"
 echo "Creating RDS CloudWatch Alarms"
 echo "======================================"
 
-chmod +x rds_alarm.sh
-../cloudwatch/rds_alarm.sh
+./aws_infra/cloudwatch/rds_alarm.sh
 
