@@ -15,7 +15,7 @@ The application consists of two microservices:
 
 # 🚀 Architecture
 
-![Architecture](docs/architecture.png)
+[Architecture](docs/architecture.png)
 
 ---
 
