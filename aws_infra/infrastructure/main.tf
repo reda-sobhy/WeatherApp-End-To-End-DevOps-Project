@@ -57,7 +57,7 @@ source = "./modules/secrets_manager"
 
 
 
-secret_name = "weather-db-v3"
+secret_name = "weather-db-v4"
 
 
 
