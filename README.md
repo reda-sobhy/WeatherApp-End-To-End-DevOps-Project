@@ -449,11 +449,8 @@ Add screenshots here.
 
 ## Architecture
 
-```
 ![Architecture](docs/architecture.png)
-```
 
----
 
 ## EKS Cluster
 
@@ -461,20 +458,19 @@ Add screenshots here.
 docs/eks.png
 
 
----
+
 
 ## Kubernetes Pods
 
 
 docs/pods.png
 
----
+
 
 ## CloudWatch
 
-```
+
 docs/cloudwatch.png
-```
 
 ---
 
