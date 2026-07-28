@@ -490,7 +490,7 @@ docs/cloudwatch.png
 ## Application
 
 ```
-docs/application.png
+docs/app.png
 ```
 
 ---
