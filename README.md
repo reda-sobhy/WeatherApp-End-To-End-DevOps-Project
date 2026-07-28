@@ -457,25 +457,16 @@ Add screenshots here.
 
 ## EKS Cluster
 
-```
+
 docs/eks.png
-```
+
 
 ---
 
 ## Kubernetes Pods
 
-```
+
 docs/pods.png
-```
-
----
-
-## GitHub Actions
-
-```
-docs/github-actions.png
-```
 
 ---
 
