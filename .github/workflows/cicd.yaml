@@ -55,15 +55,15 @@ jobs:
 
     - name: Build Auth Image
       run: |
-        docker build -t $DOCKERHUB_USERNAME/weather-auth:latest ./kubernetes/authentication
+        docker build -t $DOCKERHUB_USERNAME/weather-auth:latest ./auth/
 
     - name: Build Weather Image
       run: |
-        docker build -t $DOCKERHUB_USERNAME/weather-api:latest ./kubernetes/weather
+        docker build -t $DOCKERHUB_USERNAME/weather-api:latest ./weather/
 
     - name: Build UI Image
       run: |
-        docker build -t $DOCKERHUB_USERNAME/weather-ui:latest ./kubernetes/ui
+        docker build -t $DOCKERHUB_USERNAME/weather-ui:latest ./UI/
 
     ####################################
     # TESTS
