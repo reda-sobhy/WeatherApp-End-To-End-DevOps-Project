@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: weatherapp-weather
-          image: "afakharany/weatherapp-weather:lab"
+          image: "redasobhy/weather-api"
           imagePullPolicy: IfNotPresent
           env:
           - name: APIKEY
