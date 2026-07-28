@@ -69,7 +69,7 @@ CloudWatch Alarms
 - AWS IAM
 - AWS Secrets Manager
 - Amazon CloudWatch
-- Amazon SNS
+  
 
 ---
 
@@ -419,17 +419,13 @@ bash
 aws eks update-kubeconfig \
 --region us-east-1 \
 --name my-eks
-```
 
----
+./project_run   (will install nginx ingress controller + cloudwatch  agent + external_secret_operator) 
 
 ## Deploy Kubernetes Resources
-
-
-
 bash
 
-kubectl apply -f kubernetes/
+making a new commit that will trigger the job 
 ```
 
 ---
