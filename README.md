@@ -445,7 +445,7 @@ kubectl get ingress
 
 # 📸 Screenshots
 
-Add screenshots here.
+
 
 ## Architecture
 
@@ -455,7 +455,7 @@ Add screenshots here.
 ## EKS Cluster
 
 
-!docs/eks.png
+![eks_cluster](docs/eks.png)
 
 
 
@@ -463,7 +463,7 @@ Add screenshots here.
 ## Kubernetes Pods
 
 
-!docs/pods.png
+![pods](docs/pods.png)
 
 
 
