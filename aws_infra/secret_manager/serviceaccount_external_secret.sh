@@ -1,10 +1,8 @@
-#!/bin/bash
-
 set -e
 
 NAMESPACE="backend"
 SERVICE_ACCOUNT="weather-app-sa"
-ROLE_NAME="weather-db-v2-role"
+ROLE_NAME="weather-db-v4-role"
 
 
 echo "Getting AWS Account ID..."
