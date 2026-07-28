@@ -450,7 +450,7 @@ Add screenshots here.
 ## Architecture
 
 ```
-docs/architecture.png
+![Architecture](docs/architecture.png)
 ```
 
 ---
