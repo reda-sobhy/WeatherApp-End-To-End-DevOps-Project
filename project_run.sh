@@ -6,31 +6,32 @@ echo "======================================"
 echo "Terraform Initialization"
 echo "======================================"
 
-terraform init
+#terraform init
 
 echo "======================================"
 echo "Terraform Apply"
 echo "======================================"
 
-terraform apply --auto-approve
+#terraform apply --auto-approve
 
 echo "======================================"
 echo "Installing NGINX Ingress Controller"
 echo "======================================"
 
-aws eks update-kubeconfig --name my-eks
-kubectl create ns frontend
-kubectl create ns backend
+#aws eks update-kubeconfig --name my-eks
+#kubectl create ns frontend
+#kubectl create ns backend
 
-../ingress-controller/install-nginx-ingress.sh
+#./aws_infra/ingress-controller/install-nginx-ingress.sh
 
 echo "======================================"
 echo "Installing External Secrets Operator"
 echo "======================================"
 
-../secret_manager/install-external-secret-operator.sh
-../secret_manager/serviceaccount_external_secret.sh
-
+./aws_infra/secret_manager/install_external_secret_operator.sh
+./aws_infra/secret_manager/serviceaccount_external_secret.sh
+kubectl apply -f  ./aws_infra/secret_manager/secret_manager_files/
+kubectl apply -f  ./kubernetes/init-job.yaml
 echo "======================================"
 echo "Installing CloudWatch Addons"
 echo "======================================"
