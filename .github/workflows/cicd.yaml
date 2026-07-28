@@ -70,7 +70,7 @@ jobs:
     ####################################
 
     - name: Test Authentication (Go)
-      working-directory: authentication
+      working-directory: auth
       run: |
         go mod download
         go test ./...
@@ -82,7 +82,7 @@ jobs:
         python -m compileall .
 
     - name: Test UI (Express)
-      working-directory: ui
+      working-directory: UI
       run: |
         npm install
         npm test --if-present

@@ -39,7 +39,7 @@ spec:
       - name: app-auth
 
 
-        image: afakharany/weatherapp-auth:lab
+        image: "redasobhy/weather-auth"
 
 
         imagePullPolicy: IfNotPresent
