@@ -135,7 +135,7 @@ Terraform provisions the following AWS resources:
 - IAM Policies
 - OIDC Provider
 - AWS Secrets Manager
-
+  
 ---
 
 # 🐳 Microservices
@@ -151,23 +151,20 @@ Responsibilities:
 - Serves the frontend
 - Communicates with Authentication Service
 
-Dockerized and deployed on Kubernetes.
-
+#Dockerized and deployed on Kubernetes.
 ---
 
 ## Authentication Service
-
 Technology:
-
 - Go
-
+- 
 Responsibilities:
 
 - Authentication APIs
 - Database connectivity
 - Reads credentials from AWS Secrets Manager
 
-Dockerized and deployed on Kubernetes.
+#Dockerized and deployed on Kubernetes.
 
 ---
 
@@ -245,7 +242,6 @@ Developer
       │
 
       ▼
-
 Git Push
 
       │
@@ -426,6 +422,7 @@ aws eks update-kubeconfig \
 bash
 
 making a new commit that will trigger the job 
+![cicd-job](docs/cicd_job.png)
 ```
 
 ---
